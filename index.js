@@ -9,6 +9,7 @@ let homeScore3El = document.getElementById('home-score-3');
 let guestScore1El = document.getElementById('guest-score-1');
 let guestScore2El = document.getElementById('guest-score-2');
 let guestScore3El = document.getElementById('guest-score-3');
+const newGameEl = document.getElementById('new-game');
 
 function renderScore() {
     homeScoreEl.textContent = homeScore;
@@ -44,5 +45,11 @@ guestScore2El.addEventListener('click', function() {
 
 guestScore3El.addEventListener('click', function() {
     guestScore += 3;
+    renderScore();
+});
+
+newGameEl.addEventListener('click', function() {
+    homeScore = 0;
+    guestScore = 0;
     renderScore();
 });
