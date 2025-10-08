@@ -38,7 +38,14 @@ h3 {
     margin: 20px auto 25px auto;
     text-align: center;
     border-radius: 5px;
+    transition: outline-color 0.25s ease, outline-offset 0.25s ease;
 }
+
+.team.leader .score {
+    outline: 6px solid #FBBF24;
+    outline-offset: 6px;
+    border-radius: 8px;
+  }
 
 .container {
     display: flex;

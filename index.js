@@ -10,10 +10,24 @@ let guestScore1El = document.getElementById('guest-score-1');
 let guestScore2El = document.getElementById('guest-score-2');
 let guestScore3El = document.getElementById('guest-score-3');
 const newGameEl = document.getElementById('new-game');
+const homeSection = document.getElementById('home');
+const guestSection = document.getElementById('guest');
+
+function highlightLeader() {
+    homeSection.classList.remove('leader');
+    guestSection.classList.remove('leader');
+
+    if (homeScore > guestScore) {
+        homeSection.classList.add('leader');
+    } else if (guestScore > homeScore) {
+        guestSection.classList.add('leader');
+    }
+}
 
 function renderScore() {
     homeScoreEl.textContent = homeScore;
     guestScoreEl.textContent = guestScore;
+    highlightLeader();
 }
 
 //renderScore();
