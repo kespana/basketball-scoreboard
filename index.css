@@ -45,6 +45,11 @@ h3 {
     justify-content: space-around;
 }
 
+.controls {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
 button {
     background: transparent;
     border: 1px solid #9AABD8;
