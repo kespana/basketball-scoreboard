@@ -64,6 +64,43 @@ Planned improvements include:
 - Foul tracking
 - Additional UI polish and mobile considerations
 
+## Testing
+
+This project uses [Playwright](https://playwright.dev/) for automated testing. The test suite ensures the core functionality of the scoreboard works as expected across modern browsers (Chromium, Firefox, WebKit).
+
+### Setup
+
+If you haven't installed the test dependencies yet, run:
+
+```bash
+npx playwright install
+```
+
+### Test Coverage
+
+The current test suite (`tests/scoreboard.spec.js`) covers:
+- **Score Incrementing**: Verifies that score buttons correctly update the score.
+- **Game Period**: Verifies cycling through quarters (Q1-Q4) and resetting.
+- **Leader Highlight**: Verifies visual highlighting updates correctly as the lead changes or ties occur.
+- **Game Reset**: Verifies that the "New Game" button correctly resets scores, period, and leader highlights.
+
+### Running Tests
+
+Run all tests:
+```bash
+npx playwright test
+```
+
+Run tests with UI mode (interactive):
+```bash
+npx playwright test --ui
+```
+
+View the test report:
+```bash
+npx playwright show-report
+```
+
 ## Acknowledgements
 
 Inspired by the Scrimba Basketball Scoreboard project and extended with custom behavior, improved semantics, and additional features.
