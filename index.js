@@ -1,5 +1,6 @@
 let homeScore = 0;
 let guestScore = 0;
+let period = 1;
 
 let homeScoreEl = document.getElementById('home-score');
 let guestScoreEl = document.getElementById('guest-score');
@@ -12,6 +13,8 @@ let guestScore3El = document.getElementById('guest-score-3');
 const newGameEl = document.getElementById('new-game');
 const homeSection = document.getElementById('home');
 const guestSection = document.getElementById('guest');
+const periodDisplay = document.getElementById('period-display')
+const nextPeriodBtn = document.getElementById('next-period')
 
 function highlightLeader() {
     homeSection.classList.remove('leader');
@@ -24,46 +27,53 @@ function highlightLeader() {
     }
 }
 
-function renderScore() {
+nextPeriodBtn.addEventListener('click', function() {
+    period = (period % 4) + 1
+    render()
+}) 
+
+function render() {
     homeScoreEl.textContent = homeScore;
     guestScoreEl.textContent = guestScore;
+    
     highlightLeader();
-}
 
-//renderScore();
+    periodDisplay.textContent = `QUARTER ${period}`
+}
 
 homeScore1El.addEventListener('click', function() {
     homeScore += 1;
-    renderScore();
+    render();
 });
 
 homeScore2El.addEventListener('click', function() {
     homeScore += 2;
-    renderScore();
+    render();
 });
 
 homeScore3El.addEventListener('click', function() {
     homeScore += 3;
-    renderScore();
+    render();
 });
 
 guestScore1El.addEventListener('click', function() {
     guestScore += 1;
-    renderScore();
+    render();
 });
 
 guestScore2El.addEventListener('click', function() {
     guestScore += 2;
-    renderScore();
+    render();
 });
 
 guestScore3El.addEventListener('click', function() {
     guestScore += 3;
-    renderScore();
+    render();
 });
 
 newGameEl.addEventListener('click', function() {
     homeScore = 0;
     guestScore = 0;
-    renderScore();
+    period = 1;
+    render();
 });

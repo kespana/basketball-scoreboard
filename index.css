@@ -6,8 +6,8 @@
     font-display: swap;
   }
   
+  /* 1. Global */
 body {
-    place-items: center;
     height: 100vh;
     margin: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -15,12 +15,40 @@ body {
     color: white;
 }
 
+/* 2. Typography */
+
 h3 {
-    padding-top: 70px;
+    padding-top: 20px;
     font-size: 40px;
     margin: 0;
     text-align: center;
 }
+
+/* 3. Layout Sections */
+
+.period-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    margin: 10px 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.controls {
+    margin: 0 50px;
+}
+
+.new-game {
+    margin-top: 15px;
+    text-align: center;
+}
+
+/* 4. Components */
 
 .score {
     background-color: black;
@@ -44,17 +72,10 @@ h3 {
 .team.leader .score {
     outline: 6px solid #FBBF24;
     outline-offset: 6px;
-    border-radius: 8px;
+    border-radius: 5px;
   }
 
-.container {
-    display: flex;
-    justify-content: space-around;
-}
-
-.controls {
-    margin: 0 50px;
-}
+/* 5. Buttons */
 
 button {
     background: transparent;
@@ -68,12 +89,7 @@ button {
     margin: 0 4px;
   }
 
-.new-game {
-    margin-top: 15px;
-    text-align: center;
-}
-
-button#new-game {
+.action-button {
     border: none;
     background-color: #10B981;
     font-family: 'Verdana', sans-serif;
@@ -84,4 +100,8 @@ button#new-game {
     border-radius: 5px;
     cursor: pointer;
     margin: 0 4px;
+}
+
+.action-button:hover, .action-button:focus {
+    background-color: #0FA972;
 }
