@@ -68,6 +68,14 @@ Planned improvements include:
 
 This project uses [Playwright](https://playwright.dev/) for automated testing. The test suite ensures the core functionality of the scoreboard works as expected across modern browsers (Chromium, Firefox, WebKit).
 
+### Setup
+
+If you haven't installed the test dependencies yet, run:
+
+```bash
+npx playwright install
+```
+
 ### Test Coverage
 
 The current test suite (`tests/scoreboard.spec.js`) covers:
