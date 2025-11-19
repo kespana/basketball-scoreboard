@@ -1,6 +1,7 @@
 {
   "name": "Scrim-s04k019",
   "description": "https://scrimba.com/learn-javascript-c0v/~018",
+  "type": "module",
   "scripts": {
     "start": "vite",
     "dev": "vite",
@@ -8,6 +9,8 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "@playwright/test": "^1.56.1",
+    "@types/node": "^24.10.1",
     "vite": "^7.1.9"
   }
 }
